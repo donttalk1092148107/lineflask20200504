@@ -1,0 +1,21 @@
+import pandas as pd
+import numpy as np
+bigmac=pd.read_csv("./bigmac_P10.csv",parse_dates=["Date"])
+#print(bigmac.head(10))
+#bigmac.set_index(keys = ["Date","Country"],inplace=True)
+#print(bigmac.head(10))
+#print(bigmac.index.names)
+#print(type(bigmac.index))
+
+bigmac01 = pd.read_csv("./bigmac_P10.csv",parse_dates=["Date"],index_col=["Date","Country"])
+print(bigmac01)
+print(bigmac01.sort_index(inplace=True))
+#print(bigmac01.head(10))
+print(bigmac01.index.get_level_values(0))
+#print(bigmac01.index.get_level_values("Date"))
+#print(bigmac01.index.get_level_values(1)) 
+#print(bigmac01.index.get_level_values("Country"))
+#bigmac02 = pd.read_csv("./bigmac_P10.csv",parse_dates=["Date"],index_col=["Date","Country"]) 
+#bigmac02.sort_index(inplace=True)
+#bigmac02.index.set_names(["Day","Location"],inplace=True)
+#print(bigmac02.head())

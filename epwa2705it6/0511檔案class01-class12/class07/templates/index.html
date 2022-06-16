@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% macro input(type="text",value="",size=50) %}
+<input type="{{type}}" value="{{value}}" size="{{size}}">
+{% endmacro %}
+
+<p>預設:</p>{{ input() }}
+<p>密碼框:</p>{{ input("password") }}
+<p>size=100:</p>{{ input(size=100) }}
+
+</body>
+</html>

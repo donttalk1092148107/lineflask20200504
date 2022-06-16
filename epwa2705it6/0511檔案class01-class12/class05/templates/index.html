@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    
+    <style type="text/css">
+        .important { color: #3f0430;
+                     text-decoration: underline; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Index</h1>
+    {{ super() }}
+    <h2>這個是子模板中的標題二</h2>
+    <p class="important">
+      Welcome on my awesome homepage.
+    </p>
+{% endblock %}

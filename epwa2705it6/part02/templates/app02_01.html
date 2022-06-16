@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            margin-top: 50px;
+          border-collapse: collapse;
+        }
+        
+        table, td, th {
+          border: 1px solid black;
+          font-size: 30px;
+        }
+        label,a{
+              
+            font-size: 30px;
+        }
+        </style>
+</head>
+<body>
+  <a href="{{ url_for('index')}}">資料列表</a>
+  <a href="{{ url_for('input_data')}}">新增資料</a>
+    
+        <table>
+            <thead>
+               
+              <tr>
+               
+                <th >帳號</th>
+                <th >密碼</th>
+              </tr>
+            </thead>
+            <tbody>
+               {% for i in sendDs %}
+                      <tr>
+                     
+                          <td>{{ i[0] }}</td>
+                   
+                          <td>{{ i[1] }}</td>
+            
+                      </tr>
+
+                   {% endfor %}
+            </tbody>
+          </table>  
+
+</body>
+</html>
+
+   
+
+    
+  
+
+
+

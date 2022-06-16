@@ -1,0 +1,11 @@
+1-Add apt buildpack to heroku
+heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-apt
+
+
+2-Create a file named Aptfile in the same directory as your app and these lines to it (for english)
+tesseract-ocr
+tesseract-ocr-eng
+
+
+3-Set the config variable using
+heroku config:set TESSDATA_PREFIX=/app/.apt/usr/share/tesseract-ocr/4.00/tessdata

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>上傳</title>
+</head>
+ 
+<body>
+   
+    <table  style="border:1px" >
+  
+    </table>
+        
+      <table >
+      <thead>
+          <tr>
+          <th>-列表-</th>
+          </tr>
+        <tr>
+           <th >ID</th>
+          <th >NAME</th>
+          <th >AGE</th>
+          <th >ADDRESS</th>
+         <th >SALARY</th>
+            
+        </tr>
+      </thead>
+      <tbody>
+         {% for i in getinfos %}
+                <tr>
+                    
+                    <td>{{ i[0] }}</td>
+                    <td>{{ i[1] }}</td>
+                    <td>{{ i[2] }}</td>
+                    <td>{{ i[3] }}</td>
+                    <td>{{ i[4] }}</td>
+            
+                                    
+                </tr>         
+             {% endfor %}
+      </tbody>
+    </table>  
+    
+
+
+</body>
+ 
+</html>

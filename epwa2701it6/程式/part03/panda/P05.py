@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('./nba_P05.csv')
+print(df.head(3))
+print(df.tail())
+print(df.info())
+print(df.shape)
+print(df['Name'][0:4])
+print(df[['Name','Team']])
+df.insert(3,column="sport",value="Basketball")
+print(df.head())

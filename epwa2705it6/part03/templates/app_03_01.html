@@ -1,0 +1,51 @@
+{% extends "app_03base.html" %}
+{% block navbar %}
+<div class="jumbotron text-center" >
+  <h1>My WEB</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Logo</a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index')}}">資料列表</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('input_data')}}">新增資料</a>
+          </li>
+    </ul>
+  </nav>
+
+
+ 
+</div>
+
+<div class="container">
+
+  <table  class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>帳號</th>
+        <th>密碼</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in sendDs %}
+      <tr>
+        <td>{{ i[0] }}</td>
+        <td>{{ i[1] }}</td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+</div>
+
+
+
+{% endblock navbar %}

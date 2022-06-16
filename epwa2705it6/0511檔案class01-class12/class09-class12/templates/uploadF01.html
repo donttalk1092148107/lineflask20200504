@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>upload</title>
+</head>
+ 
+<body>
+   
+        <form method="post"  enctype="multipart/form-data" action="{{ url_for('upload') }}">
+        <table class="table table-bordered">
+              
+       <tbody>
+           <tr>
+           
+           <th >-上傳商品-</th>
+                
+           </tr>
+           <tr>
+            <th>產品類別</th>    
+             <td><input type="text" name="psort" ></td>
+             </tr>
+             <tr>
+
+          <tr>
+          <th>產品名稱</th>    
+           <td><input type="text" name="pname" ></td>
+           </tr>
+           <tr>
+                <th>產品金額</th>
+           <td><input type="text" name="pmoney"></td>
+           </tr>
+           <tr>
+               <th>產品圖片</th>
+           <td><input type="file" size="30" name="pimg"/></td>
+           </tr>
+           <tr>
+               <th>送出</th>
+           <td><input type="submit" value="送出"></td>
+          </tr>
+        </tbody>
+      </table>               
+       
+          {{okk}}
+           
+          </form>
+     
+</body>
+ 
+</html>
